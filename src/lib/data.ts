@@ -5,6 +5,7 @@ import {
   Sparkle,
   Webcam,
 } from "lucide-react";
+import { CallStatusEnum } from "../../generated/prisma/enums";
 
 export const sidebarData = [
   {
@@ -36,5 +37,56 @@ export const sidebarData = [
     title: "Settings",
     icon: SettingsIcon,
     link: "/settings",
+  },
+];
+
+export const onBoardingSteps = [
+  { id: 1, title: "Create a webinar", complete: false, link: "" },
+  { id: 2, title: "Get leads", complete: false, link: "" },
+  { id: 3, title: "Conversion status", complete: false, link: "" },
+];
+
+export const potentialCustomer = [
+  {
+    id: "1",
+    name: "John Doe",
+    email: "Johndoe@gmail.com",
+    clerkId: "1",
+    profileImage: "/vercel.svg",
+    isActive: true,
+    lastLoginAt: null,
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    deletedAt: null,
+    tags: ["Not", "Might"],
+    callStatus: CallStatusEnum.COMPLETED,
+  },
+  {
+    id: "2",
+    name: "Mike Doe",
+    email: "Mikedoe@gmail.com",
+    clerkId: "2",
+    profileImage: "/vercel.svg",
+    isActive: true,
+    lastLoginAt: null,
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    deletedAt: null,
+    tags: ["New", "Hot Lead"],
+    callStatus: CallStatusEnum.INPROGRESS,
+  },
+  {
+    id: "3",
+    name: "John Mark",
+    email: "Johndoe@gmail.com",
+    clerkId: "3",
+    profileImage: "/vercel.svg",
+    isActive: true,
+    lastLoginAt: null,
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    deletedAt: null,
+    tags: ["Must", "Maybe"],
+    callStatus: CallStatusEnum.PENDING,
   },
 ];

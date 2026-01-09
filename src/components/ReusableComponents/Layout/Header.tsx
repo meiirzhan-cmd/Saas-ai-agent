@@ -1,5 +1,8 @@
+"use client";
+
+import PurpleIcon from "@/components/ReusableComponents/Layout/PurpleIcon";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, LightbulbIcon } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 
@@ -39,6 +42,12 @@ const Header = ({ user }: Props) => {
           {pathname.split("/")[1]}
         </div>
       )}
+
+      <div className="flex gap-6 items-center flex-wrap">
+        <PurpleIcon>
+          <LightbulbIcon />
+        </PurpleIcon>
+      </div>
     </div>
   );
 };
