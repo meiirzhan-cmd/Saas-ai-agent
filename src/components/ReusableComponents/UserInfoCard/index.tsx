@@ -1,5 +1,5 @@
 import React from "react";
-import { Attendee } from "../../../../../generated/prisma/client";
+import { Attendee } from "../../../../generated/prisma/client";
 import { cn } from "@/lib/utils";
 
 type Props = {

@@ -4,7 +4,7 @@ import FeatureCard from "./_components/FeatureCard";
 import FeatureSectionLayout from "./_components/FeatureSectionLayout";
 import Image from "next/image";
 import { potentialCustomer } from "@/lib/data";
-import UserInfoCard from "@/components/ReusableComponents/Layout/UserInfoCard";
+import UserInfoCard from "@/components/ReusableComponents/UserInfoCard";
 
 const Pages = () => {
   return (

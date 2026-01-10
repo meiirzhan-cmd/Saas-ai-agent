@@ -1,10 +1,11 @@
 "use client";
 
-import PurpleIcon from "@/components/ReusableComponents/Layout/PurpleIcon";
+import PurpleIcon from "@/components/ReusableComponents/PurpleIcon";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, LightbulbIcon } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 import React from "react";
+import CreateWebinarButton from "../CreateWebinarButton.tsx";
 
 type User = {
   id: string;
@@ -28,7 +29,7 @@ const Header = ({ user }: Props) => {
   const router = useRouter();
 
   return (
-    <div className="w-full px-4 pt-10 sticky top-0 z-10 flex justify-between items-center flex-wrap gap-4 bg-background">
+    <div className="w-full px-4 py-4 sticky top-0 z-10 flex justify-between items-center flex-wrap gap-4 bg-background">
       {pathname.includes("pipeline") ? (
         <Button
           className="bg-primary/10 border border-border rounded-xl"
@@ -47,6 +48,8 @@ const Header = ({ user }: Props) => {
         <PurpleIcon>
           <LightbulbIcon />
         </PurpleIcon>
+
+        <CreateWebinarButton />
       </div>
     </div>
   );

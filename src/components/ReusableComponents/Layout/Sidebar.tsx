@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/tooltip";
 import { sidebarData } from "@/lib/data";
 import { UserButton } from "@clerk/clerk-react";
+import { TooltipContent } from "@radix-ui/react-tooltip";
 import { Spotlight } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -39,6 +40,9 @@ const Sidebar = () => {
                     />
                   </Link>
                 </TooltipTrigger>
+                <TooltipContent side="right">
+                  <span className="text-sm">{item.title}</span>
+                </TooltipContent>
               </Tooltip>
             </TooltipProvider>
           ))}
